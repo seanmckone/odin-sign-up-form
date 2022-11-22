@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    font-family: serif;
 }
 ol, ul {
 	list-style: none;
@@ -49,6 +50,11 @@ table {
 }
 /*-----------------Normalize-----------------*/
 
+@font-face {
+    font-family: Raleway;
+    src: url(Raleway-VariableFont_wght.ttf);
+  }
+
 * {
     box-sizing: border-box;
 }
@@ -60,19 +66,86 @@ html, body {
 body {
     display: flex;
     flex-direction: row;
+    font-family: Raleway;
 }
 
 h1 {
     font-size: 70px;
     color:white;
+    font-family: serif;
+    font-weight: lighter;
 }
 
 h2 {
     font-size: 30px;
-    padding: 10px 0px 10px 0px;
+    padding: 0px 0px 30px 0px;
+    font-weight: 600;
+    line-height: 40px;
+    color:#3f3f3f
+}
+
+h3 {
+    font-size: 20px;
+    color:#3f3f3f
+}
+
+header, footer, .formcontainer {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+header {
+    margin-bottom: 50px;
+    max-width: 1000px;
 }
 
 
+em {
+    font-style: italic;
+}
+
+input {
+    height: 40px;
+    width: 300px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    border: #d7dfdd 1px solid;
+    border-radius: 5px;
+}
+
+input, button {
+    font-family: Raleway;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color:#636363;
+    padding-bottom: 3px;
+}
+
+footer {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+footer button {
+    width: 250px;
+    height: 60px;
+    border-radius: 10px;
+    border-width: 0px;
+    background: linear-gradient(53deg, rgba(66,168,225,1) 0%, rgba(16,118,200,1) 100%);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 10px 17px -5px #9BA5A3;
+}
+
+footer a {
+    color: #383838;
+}
 
 .logotext {
     margin-top: 300px;
@@ -94,21 +167,37 @@ h2 {
 .leftcol {
     display: flex;
     flex-direction: column;
-    width: 30%;
-    background-image: url("background_image.jpg");
-    background-size: 750px;
+    width: 40%;
+    background-image: url("background_image_2.jpg");
+    background-size: 2000px;
+    background-position: center;
 }
 
 .rightcol {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 60%;
     background-color:rgb(232, 234, 235);
-    padding-top: 200px;
+    justify-content: center;
 }
 
 
 .formcontainer {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     box-shadow: 0px 10px 17px -5px #9BA5A3;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.formcontainer form {
+    display: flex;
+    gap: 10%;
+}
+
+.formleftcol, .formrightcol {
+    display: flex;
+    flex-direction: column;
 }
