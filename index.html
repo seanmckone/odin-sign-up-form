@@ -24,27 +24,41 @@
         </header>
         <div class="formcontainer">
             <h2>Let's do this!</h2>
-            <form action="" method="post">
-                <div class="formleftcol">
-                    <label for="firstname">FIRST NAME</label>
-                    <input type="text" id="firstname" name="firstname">
-                    <label for="email">EMAIL</label>
-                    <input type="text" id="email" name="email">
-                    <label for="password">PASSWORD</label>
-                    <input type="text" id="password" name="password">
+            <form action="" method="post" id="myform">
+                <div class="formrow">
+                    <div class="formandlabel">
+                        <label for="firstname">FIRST NAME</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                    </div>
+                    <div class="formandlabel">
+                        <label for="lastname">LAST NAME</label>
+                        <input type="text" id="lastname" name="lastname" required>
+                    </div>
                 </div>
-                <div class="formrightcol">
-                    <label for="lastname">LAST NAME</label>
-                    <input type="text" id="lastname" name="lastname">
-                    <label for="phonenumber">PHONE NUMBER</label>
-                    <input type="text" id="phonenumber" name="phonenumber">
-                    <label for="comfirmpassword">CONFIRM PASSWORD</label>
-                    <input type="text" id="comfirmpassword" name="comfirmpassword">
+                <div class="formrow">
+                    <div class="formandlabel">
+                        <label for="phonenumber">PHONE NUMBER</label>
+                        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="phonenumber" name="phonenumber" required>
+                    </div>
+                    <div class="formandlabel">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="formrow">
+                    <div class="formandlabel">               
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password" required>
+                    </div> 
+                    <div class="formandlabel">  
+                        <label for="comfirmpassword">CONFIRM PASSWORD</label>
+                        <input type="password" id="comfirmpassword" name="comfirmpassword" required>
+                    </div>
                 </div>
             </form>
         </div>
         <footer class="footer">
-            <button>Create Account</button>
+            <input type="submit" form="myform" value="Create Account">
             <h3>Already have an account? <a href="">Log in</a></h3>
         </footer>
     </div>
